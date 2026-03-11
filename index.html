@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risky Bawang — Distributor Rempah Magetan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0a07;
+  --bg2: #130f0a;
+  --cream: #f2ead8;
+  --cream2: #e8dcc4;
+  --gold: #c9922a;
+  --gold2: #e8b04a;
+  --red: #8b2a1a;
+  --red2: #b83a22;
+  --green: #2d4a1e;
+  --text-dim: rgba(242,234,216,0.5);
+  --text-dimmer: rgba(242,234,216,0.3);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:999;
+}
+
+/* ══════════════════ NAV ══════════════════ */
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 4vw;
+  background: linear-gradient(to bottom, rgba(13,10,7,0.95), transparent);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid rgba(201,146,42,0.3);
+  padding: 0.35rem 0.9rem;
+}
+
+.nav-wa {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--gold2);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-wa:hover { color: var(--cream); }
+
+/* ══════════════════ HERO ══════════════════ */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 6vw;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 75% 50%, rgba(45,74,30,0.25) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(139,42,26,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 20%, rgba(201,146,42,0.08) 0%, transparent 70%);
+}
+
+/* big decorative text behind */
+.hero-deco {
+  position: absolute;
+  right: -2vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(8rem, 18vw, 22rem);
+  font-weight: 900;
+  font-style: italic;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201,146,42,0.08);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 1s 0.1s both;
+}
+
+.eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.eyebrow-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  animation: fadeUp 1s 0.25s both;
+}
+
+.hero h1 .accent { color: var(--gold); font-style: italic; }
+.hero h1 .light { font-weight: 400; font-style: italic; color: var(--cream2); }
+
+.hero-sub {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  animation: fadeUp 1s 0.4s both;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 1s 0.55s both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border: 1px solid rgba(242,234,216,0.2);
+  color: var(--cream);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.3s, color 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(242,234,216,0.08);
+  animation: fadeUp 1s 0.7s both;
+}
+
+.stat-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold2);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.stat-key {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-dimmer);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: fadeUp 1.5s 1.2s both;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+  0%,100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ══════════════════ TENTANG ══════════════════ */
+.about {
+  padding: 8rem 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media(max-width:768px){
+  .about { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+.about-text .section-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h2 em { color: var(--gold); font-style: italic; }
+
+.about-text p {
+  font-size: 0.88rem;
+  line-height: 2;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.about-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(242,234,216,0.06);
+}
+
+.about-box {
+  background: var(--bg2);
+  padding: 2rem 1.5rem;
+  transition: background 0.3s;
+}
+.about-box:hover { background: rgba(201,146,42,0.06); }
+
+.about-box-icon { font-size: 1.8rem; margin-bottom: 0.8rem; display: block; }
+
+.about-box h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--cream);
+}
+
+.about-box p {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--text-dimmer);
+}
+
+/* ══════════════════ PRODUK ══════════════════ */
+.products {
+  padding: 6rem 6vw;
+  background: var(--bg2);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header .section-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-header h2 em { color: var(--gold); font-style: italic; }
+
+.section-header p {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 0.8rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* FEATURED PRODUCT */
+.product-featured {
+  background: linear-gradient(135deg, rgba(45,74,30,0.3) 0%, rgba(13,10,7,0.8) 60%);
+  border: 1px solid rgba(201,146,42,0.2);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.product-featured:hover { border-color: rgba(201,146,42,0.5); }
+
+.product-featured::before {
+  content: 'UNGGULAN';
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.25rem 0.6rem;
+}
+
+.product-featured-deco {
+  position: absolute;
+  right: -1rem;
+  bottom: -2rem;
+  font-size: 8rem;
+  opacity: 0.04;
+  user-select: none;
+}
+
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+
+.product-sub {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(201,146,42,0.3);
+  color: var(--gold2);
+  text-transform: uppercase;
+}
+
+.tag.red { border-color: rgba(184,58,34,0.4); color: #e07060; }
+.tag.green { border-color: rgba(45,74,30,0.6); color: #7aab5a; }
+
+.product-weight {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.weight-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.weight-key {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+}
+
+/* PRODUCT GRID */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: rgba(242,234,216,0.05);
+}
+
+.product-card {
+  background: var(--bg);
+  padding: 2rem 1.8rem;
+  transition: background 0.3s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.product-card:hover { background: rgba(201,146,42,0.04); }
+.product-card:hover::after { width: 100%; }
+
+.card-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
+.card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+
+.card-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-option {
+  font-size: 0.7rem;
+  color: var(--text-dimmer);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-option::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ══════════════════ AREA LAYANAN ══════════════════ */
+.area {
+  padding: 7rem 6vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+@media(max-width:768px){ .area { grid-template-columns: 1fr; gap: 3rem; } }
+
+.area-map {
+  aspect-ratio: 1;
+  background: var(--bg2);
+  border: 1px solid rgba(242,234,216,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.area-map::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(201,146,42,0.08) 0%, transparent 70%);
+}
+
+.map-pin {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  animation: pinBounce 2s ease-in-out infinite;
+}
+
+@keyframes pinBounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.map-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.map-rings {
+  position: absolute;
+  width: 60%; aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(201,146,42,0.1);
+  animation: ringExpand 3s ease-in-out infinite;
+}
+
+.map-rings:nth-child(2) { width: 75%; animation-delay: 1s; }
+.map-rings:nth-child(3) { width: 90%; animation-delay: 2s; }
+
+@keyframes ringExpand {
+  0%,100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.15; transform: scale(1.05); }
+}
+
+.area-text .section-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.area-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.area-text p {
+  font-size: 0.87rem;
+  line-height: 2;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.area-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: rgba(201,146,42,0.07);
+  border-left: 2px solid var(--gold);
+  margin-top: 1.5rem;
+}
+
+.area-note-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+.area-note p {
+  font-size: 0.8rem;
+  color: var(--cream2);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ══════════════════ ORDER ══════════════════ */
+.order {
+  padding: 7rem 6vw;
+  background: var(--bg2);
+  text-align: center;
+}
+
+.order h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.order h2 em { color: var(--gold); font-style: italic; }
+
+.order-sub {
+  font-size: 0.87rem;
+  color: var(--text-dim);
+  max-width: 460px;
+  margin: 0 auto 3rem;
+  line-height: 1.9;
+}
+
+.order-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--bg);
+  border: 1px solid rgba(201,146,42,0.25);
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+  transition: border-color 0.3s;
+}
+
+.order-card:hover { border-color: var(--gold); }
+
+.wa-icon { font-size: 2.5rem; }
+
+.order-card-text { text-align: left; }
+
+.order-card-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+  margin-bottom: 0.3rem;
+}
+
+.order-card-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+
+.order-steps {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.step {
+  flex: 1;
+  min-width: 160px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dimmer);
+  font-size: 1rem;
+}
+
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(201,146,42,0.2);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.step-text {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.1rem 2.8rem;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 2px;
+}
+
+.wa-btn:hover { background: #1ebe5a; transform: translateY(-2px); }
+
+/* ══════════════════ VIDEO SCRIPT ══════════════════ */
+.script {
+  padding: 7rem 6vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.script .section-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.script h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.script h2 em { color: var(--gold); font-style: italic; }
+
+.script-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(242,234,216,0.08);
+}
+
+.tab-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+.tab-btn:hover { color: var(--cream); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.scene {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(242,234,216,0.06);
+}
+
+.scene:last-child { border-bottom: none; margin-bottom: 0; }
+
+.scene-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.scene-time {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  border: 1px solid rgba(201,146,42,0.3);
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+}
+
+.scene-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream2);
+}
+
+.scene-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.scene-label-col {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+  padding-top: 0.15rem;
+}
+
+.scene-content {
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+}
+
+.scene-content em {
+  color: var(--cream);
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ══════════════════ CAPTION SECTION ══════════════════ */
+.captions {
+  padding: 6rem 6vw;
+  background: var(--bg2);
+}
+
+.captions .section-header { margin-bottom: 3rem; }
+
+.caption-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.caption-card {
+  background: var(--bg);
+  border: 1px solid rgba(242,234,216,0.06);
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+
+.caption-card:hover { border-color: rgba(201,146,42,0.25); }
+
+.caption-platform {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.caption-body {
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  white-space: pre-line;
+}
+
+.caption-hashtags {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: rgba(201,146,42,0.6);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.copy-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid rgba(242,234,216,0.1);
+  color: var(--text-dimmer);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.copy-btn:hover { border-color: var(--gold); color: var(--gold); }
+.copy-btn.copied { border-color: #25d366; color: #25d366; }
+
+/* ══════════════════ FOOTER ══════════════════ */
+footer {
+  padding: 3rem 6vw;
+  border-top: 1px solid rgba(242,234,216,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-brand span { color: var(--gold); }
+
+.footer-info {
+  font-size: 0.72rem;
+  color: var(--text-dimmer);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.footer-wa {
+  font-size: 0.72rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+/* ══════════════════ ANIMATIONS ══════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════ RESPONSIVE ══════════════════ */
+@media(max-width:600px){
+  nav { padding: 1rem 4vw; }
+  .nav-badge { display: none; }
+  .hero { padding: 7rem 5vw 4rem; }
+  .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+  .product-featured { grid-template-columns: 1fr; }
+  .product-weight { text-align: left; }
+  .order-card { flex-direction: column; text-align: center; padding: 1.5rem 2rem; }
+  .step:not(:last-child)::after { display: none; }
+  .scene-row { grid-template-columns: 1fr; gap: 0.3rem; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Risky <span>Bawang</span></div>
+  <div class="nav-badge">Cabang Magetan</div>
+  <a href="https://wa.me/6287780748765" class="nav-wa" target="_blank">
+    📱 087780748765
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-deco">Rempah</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Distributor Rempah Magetan</span>
+    </div>
+    <h1>
+      Risky<br>
+      <span class="accent">Bawang</span><br>
+      <span class="light">Magetan</span>
+    </h1>
+    <p class="hero-sub">
+      Pusat distribusi bawang putih & rempah pilihan di Magetan. Melayani pembelian grosir skala besar maupun eceran — langsung dari sumber terpercaya.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/6287780748765?text=Halo%20Risky%20Bawang%2C%20saya%20ingin%20pesan%20produk" class="btn-primary" target="_blank">
+        📱 Pesan via WhatsApp
+      </a>
+      <a href="#produk" class="btn-outline">Lihat Produk</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">8+</div>
+        <div class="stat-key">Jenis Produk</div>
+      </div>
+      <div>
+        <div class="stat-val">Grosir</div>
+        <div class="stat-key">& Eceran</div>
+      </div>
+      <div>
+        <div class="stat-val">Magetan</div>
+        <div class="stat-key">Jawa Timur</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section class="about">
+  <div class="about-text">
+    <span class="section-tag">Tentang Kami</span>
+    <h2>Distributor <em>Terpercaya</em><br>di Magetan</h2>
+    <p>Risky Bawang Cabang Magetan hadir untuk memenuhi kebutuhan bawang putih dan rempah berkualitas — mulai dari skala rumah tangga, pedagang pasar, warung makan, katering, hingga distributor besar.</p>
+    <p>Kami mengutamakan kualitas produk segar, timbangan jujur, dan pelayanan yang cepat. Lokasi kami berada di kawasan Pasar Sayur Magetan, mudah diakses dan siap melayani.</p>
+  </div>
+  <div class="about-boxes">
+    <div class="about-box">
+      <span class="about-box-icon">🧄</span>
+      <h4>Produk Segar</h4>
+      <p>Bawang putih & rempah pilihan dengan kualitas terjaga dari sumber terpercaya.</p>
+    </div>
+    <div class="about-box">
+      <span class="about-box-icon">⚖️</span>
+      <h4>Timbangan Jujur</h4>
+      <p>Setiap karung ditimbang akurat. Anda dapat sesuai yang dipesan.</p>
+    </div>
+    <div class="about-box">
+      <span class="about-box-icon">🚚</span>
+      <h4>Pengiriman Lokal</h4>
+      <p>Pengiriman tersedia di area sekitar Pasar Sayur Magetan.</p>
+    </div>
+    <div class="about-box">
+      <span class="about-box-icon">🤝</span>
+      <h4>Grosir & Eceran</h4>
+      <p>Melayani pembelian besar maupun kecil dengan harga yang kompetitif.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK -->
+<section class="products" id="produk">
+  <div class="section-header">
+    <span class="section-tag">Katalog Produk</span>
+    <h2>Produk <em>Unggulan</em> Kami</h2>
+    <p>Tersedia dalam kemasan karung maupun eceran sesuai kebutuhan Anda.</p>
+  </div>
+
+  <!-- FEATURED: Bawang Putih Sinco -->
+  <div style="max-width:1100px; margin:0 auto 1.5rem;">
+    <div class="product-featured">
+      <div class="product-featured-deco">🧄</div>
+      <div>
+        <div class="product-name">Bawang Putih Sinco (Honan)</div>
+        <p class="product-sub">Varietas Honan — biji besar, kulit tipis, aroma kuat dan tajam. Favorit dapur profesional dan pedagang grosir. Ideal untuk masakan skala besar maupun rumah tangga.</p>
+        <div class="product-tags">
+          <span class="tag">Per Sak 20 kg</span>
+          <span class="tag green">Grade A</span>
+          <span class="tag">Stok Tersedia</span>
+        </div>
+      </div>
+      <div class="product-weight">
+        <span class="weight-val">20 kg</span>
+        <span class="weight-key">Per Karung</span>
+      </div>
+    </div>
+
+    <!-- FEATURED: Bawang Putih Kating -->
+    <div class="product-featured" style="background: linear-gradient(135deg, rgba(139,42,26,0.15) 0%, rgba(13,10,7,0.8) 60%);">
+      <div class="product-featured-deco">🌿</div>
+      <div>
+        <div class="product-name">Bawang Putih Kating</div>
+        <p class="product-sub">Varietas lokal Kating — biji lebih kecil, aroma pekat, rasa lebih intens. Pilihan utama untuk masakan tradisional dan bumbu giling.</p>
+        <div class="product-tags">
+          <span class="tag">Per Sak 20 kg</span>
+          <span class="tag green">Lokal Premium</span>
+          <span class="tag">Stok Tersedia</span>
+        </div>
+      </div>
+      <div class="product-weight">
+        <span class="weight-val">20 kg</span>
+        <span class="weight-key">Per Karung</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div class="products-grid" style="max-width:1100px; margin:0 auto;">
+    <div class="product-card">
+      <span class="card-emoji">🧅</span>
+      <div class="card-name">Bawang Bombay</div>
+      <p class="card-desc">Bawang bombay segar berukuran besar. Cocok untuk tumisan, sup, dan masakan Western maupun Asia.</p>
+      <div class="card-options">
+        <div class="card-option">Per Sak 25 kg</div>
+        <div class="card-option">Stok selalu tersedia</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="card-emoji">🌶️</span>
+      <div class="card-name">Cabai Kering</div>
+      <p class="card-desc">Cabai kering pilihan dengan warna merah cerah dan tingkat kepedasan optimal. Ideal untuk industri bumbu dan masakan.</p>
+      <div class="card-options">
+        <div class="card-option">Per Sak 10 kg</div>
+        <div class="card-option">Kering sempurna</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="card-emoji">🫘</span>
+      <div class="card-name">Ketumbar</div>
+      <p class="card-desc">Ketumbar berkualitas tinggi dengan aroma segar khas. Tersedia dalam kemasan sak maupun eceran fleksibel.</p>
+      <div class="card-options">
+        <div class="card-option">Per Sak 25 kg</div>
+        <div class="card-option">Eceran tersedia</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="card-emoji">⚫</span>
+      <div class="card-name">Merica / Lada</div>
+      <p class="card-desc">Merica butiran pilihan, aroma kuat dan tajam. Cocok untuk kebutuhan rumah tangga, restoran, dan industri makanan.</p>
+      <div class="card-options">
+        <div class="card-option">Eceran (harga per kg)</div>
+        <div class="card-option">Kualitas terjamin</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="card-emoji">🥜</span>
+      <div class="card-name">Kacang Tanah Kupas</div>
+      <p class="card-desc">Kacang tanah kupas bersih, siap olah. Sempurna untuk industri kuliner, pembuat kacang goreng, dan usaha makanan.</p>
+      <div class="card-options">
+        <div class="card-option">Per Sak 25 kg</div>
+        <div class="card-option">Kupas bersih</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <span class="card-emoji">🟡</span>
+      <div class="card-name">Kemiri</div>
+      <p class="card-desc">Kemiri pilihan untuk bumbu masak — rasa gurih alami yang kaya. Cocok untuk semua jenis masakan tradisional Indonesia.</p>
+      <div class="card-options">
+        <div class="card-option">Per Sak 25 kg</div>
+        <div class="card-option">Eceran 5 kg tersedia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA LAYANAN -->
+<section class="area">
+  <div class="area-map">
+    <div class="map-rings"></div>
+    <div class="map-rings"></div>
+    <div class="map-rings"></div>
+    <div class="map-pin">📍</div>
+    <div class="map-label">Pasar Sayur · Magetan · Jawa Timur</div>
+  </div>
+  <div class="area-text">
+    <span class="section-tag">Area Layanan</span>
+    <h2>Berbasis di<br>Pasar Sayur Magetan</h2>
+    <p>Toko kami berlokasi strategis di kawasan Pasar Sayur Magetan. Datang langsung atau hubungi kami terlebih dahulu untuk memastikan ketersediaan stok.</p>
+    <p>Pembelian offline sangat kami anjurkan agar Anda dapat memeriksa kualitas produk secara langsung sebelum bertransaksi.</p>
+    <div class="area-note">
+      <span class="area-note-icon">🚚</span>
+      <p><strong>Pengiriman Online</strong> tersedia khusus area sekitar Pasar Sayur Magetan. Di luar area tersebut, kami melayani pembelian <strong>offline / ambil sendiri</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="order">
+  <span class="section-tag" style="display:block; font-size:0.62rem; letter-spacing:0.45em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Cara Pemesanan</span>
+  <h2>Pesan <em>Sekarang</em><br>via WhatsApp</h2>
+  <p class="order-sub">Hubungi kami langsung untuk cek ketersediaan stok, harga grosir, dan informasi pengiriman.</p>
+
+  <div style="display:flex; justify-content:center; margin-bottom:2.5rem;">
+    <div class="order-card">
+      <div class="wa-icon">📱</div>
+      <div class="order-card-text">
+        <div class="order-card-label">WhatsApp / Telepon</div>
+        <div class="order-card-number">0877-8074-8765</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="order-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-text">Hubungi kami via WhatsApp</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-text">Sebutkan produk & jumlah</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-text">Konfirmasi harga & stok</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-text">Ambil / terima produk</div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/6287780748765?text=Halo%20Risky%20Bawang%20Magetan%2C%20saya%20ingin%20bertanya%20tentang%20produk%20dan%20harga" class="wa-btn" target="_blank">
+    💬 Chat WhatsApp Sekarang
+  </a>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Risky <span>Bawang</span> — Magetan</div>
+  <div class="footer-info">
+    Pasar Sayur Magetan, Jawa Timur<br>
+    Pembelian offline · Pengiriman area Pasar Sayur Magetan
+  </div>
+  <a href="https://wa.me/6287780748765" class="footer-wa" target="_blank">📱 0877-8074-8765</a>
+</footer>
+
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function copyCaption(btn) {
+  const card = btn.closest('.caption-card');
+  const body = card.querySelector('.caption-body').innerText;
+  const tags = card.querySelector('.caption-hashtags').innerText;
+  navigator.clipboard.writeText(body + '\n\n' + tags).then(() => {
+    btn.textContent = '✓ Tersalin!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Salin Caption';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+</body>
+</html>
