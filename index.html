@@ -6,44 +6,36 @@
 <title>Risky Bawang — Distributor Rempah Magetan</title>
 <style>
 :root{--bg:#0d0a07;--bg2:#130f0a;--cream:#f2ead8;--cream2:#e8dcc4;--gold:#c9922a;--gold2:#e8b04a;--text-dim:rgba(242,234,216,0.88);--text-dimmer:rgba(242,234,216,0.65);}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--cream);font-family:Georgia,serif;overflow-x:hidden;}
-p,span,a,small{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
-
-/* NAV */
+p,span,a,small,div{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+h1,h2,h3,h4,.pname,.cname,.snum,.wbadge,.onumber,.fbrand{font-family:Georgia,'Times New Roman',serif;}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 5vw;background:rgba(13,10,7,0.97);border-bottom:1px solid rgba(201,146,42,0.15);}
-.nav-logo{font-size:1.2rem;font-weight:700;color:var(--cream);}
+.nav-logo{font-family:Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--cream);}
 .nav-logo span{color:var(--gold);}
-.nav-badge{font-size:0.57rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,146,42,0.4);padding:0.28rem 0.75rem;font-family:sans-serif;}
-.nav-wa{font-size:0.75rem;color:var(--gold2);text-decoration:none;font-family:sans-serif;}
+.nav-badge{font-size:0.57rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,146,42,0.4);padding:0.28rem 0.75rem;}
+.nav-wa{font-size:0.75rem;color:var(--gold2);text-decoration:none;}
 @media(max-width:500px){.nav-badge{display:none;}}
-
-/* HERO */
 .hero{min-height:100vh;padding:7rem 5vw 5rem;position:relative;display:flex;align-items:center;overflow:hidden;}
-.hero-bg-img{position:absolute;inset:0;background-image:url('images/sinco.jpg');background-size:cover;background-position:center;opacity:0.09;}
+.hero-bg-img{position:absolute;inset:0;background-image:url('sinco.jpg');background-size:cover;background-position:center;opacity:0.09;}
 .hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(45,74,30,0.25) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 15% 80%,rgba(139,42,26,0.15) 0%,transparent 60%);}
 .hero-content{position:relative;z-index:2;max-width:650px;}
 .eyebrow{display:flex;align-items:center;gap:0.8rem;margin-bottom:1.5rem;}
 .eyebrow-line{width:36px;height:1px;background:var(--gold);}
-.eyebrow-text{font-size:0.62rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);font-family:sans-serif;}
+.eyebrow-text{font-size:0.62rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);}
 .hero h1{font-size:clamp(2.8rem,7vw,6rem);font-weight:900;line-height:1.0;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--cream);}
-.hero h1 .accent{color:var(--gold);font-style:italic;}
-.hero h1 .light{font-weight:400;font-style:italic;color:var(--cream2);}
+.accent{color:var(--gold);font-style:italic;}
+.light{font-weight:400;font-style:italic;color:var(--cream2);}
 .hero-sub{font-size:0.9rem;line-height:1.9;color:var(--text-dim);max-width:460px;margin-bottom:2.5rem;}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:var(--gold);color:#0d0a07;font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-family:sans-serif;}
+.btn-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:var(--gold);color:#0d0a07;font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;}
 .btn-gold:hover{background:var(--gold2);}
-.btn-outline{display:inline-flex;align-items:center;padding:0.9rem 2rem;border:1px solid rgba(242,234,216,0.3);color:var(--cream);font-size:0.73rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-family:sans-serif;}
+.btn-outline{display:inline-flex;align-items:center;padding:0.9rem 2rem;border:1px solid rgba(242,234,216,0.3);color:var(--cream);font-size:0.73rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(242,234,216,0.08);flex-wrap:wrap;}
-.stat-val{font-size:1.7rem;font-weight:700;color:var(--gold2);line-height:1;margin-bottom:0.2rem;}
-.stat-key{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-dimmer);font-family:sans-serif;}
-
-/* SECTION TAG */
-.stag{font-size:0.6rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.9rem;font-family:sans-serif;}
-
-/* ABOUT */
+.stat-val{font-family:Georgia,serif;font-size:1.7rem;font-weight:700;color:var(--gold2);line-height:1;margin-bottom:0.2rem;}
+.stat-key{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-dimmer);}
+.stag{font-size:0.6rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.9rem;}
 .about{padding:6rem 5vw;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto;}
 @media(max-width:768px){.about{grid-template-columns:1fr;gap:3rem;}}
 .about h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700;line-height:1.2;margin-bottom:1.3rem;color:var(--cream);}
@@ -52,10 +44,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .about-boxes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(242,234,216,0.06);}
 .abox{background:var(--bg2);padding:1.6rem 1.3rem;}
 .abox-icon{font-size:1.6rem;margin-bottom:0.6rem;display:block;}
-.abox h4{font-size:0.95rem;font-weight:600;margin-bottom:0.3rem;color:var(--cream);}
+.abox h4{font-family:Georgia,serif;font-size:0.95rem;font-weight:600;margin-bottom:0.3rem;color:var(--cream);}
 .abox p{font-size:0.75rem;line-height:1.7;color:var(--text-dimmer);margin:0;}
-
-/* PRODUCTS */
 .products{padding:5rem 5vw;background:var(--bg2);}
 .sec-head{text-align:center;margin-bottom:3rem;}
 .sec-head h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700;color:var(--cream);margin-top:0.5rem;}
@@ -65,14 +55,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @media(max-width:700px){.feat-grid{grid-template-columns:1fr;}}
 .fcard{background:var(--bg);border:1px solid rgba(201,146,42,0.2);position:relative;overflow:hidden;transition:border-color 0.3s;}
 .fcard:hover{border-color:rgba(201,146,42,0.5);}
-.fcard::before{content:'UNGGULAN';position:absolute;top:0.7rem;right:0.8rem;font-size:0.5rem;letter-spacing:0.4em;color:var(--gold);border:1px solid var(--gold);padding:0.15rem 0.5rem;z-index:2;font-family:sans-serif;}
+.fcard::before{content:'UNGGULAN';position:absolute;top:0.7rem;right:0.8rem;font-size:0.5rem;letter-spacing:0.4em;color:var(--gold);border:1px solid var(--gold);padding:0.15rem 0.5rem;z-index:2;}
 .fimg{width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.85);}
 .fbody{padding:1.4rem;}
 .pname{font-size:1.25rem;font-weight:700;margin-bottom:0.4rem;color:var(--cream);}
 .psub{font-size:0.76rem;color:var(--text-dim);margin-bottom:0.8rem;line-height:1.7;}
 .pmeta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
 .tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
-.tag{font-size:0.58rem;letter-spacing:0.15em;padding:0.22rem 0.6rem;border:1px solid rgba(201,146,42,0.3);color:var(--gold2);text-transform:uppercase;font-family:sans-serif;}
+.tag{font-size:0.58rem;letter-spacing:0.15em;padding:0.22rem 0.6rem;border:1px solid rgba(201,146,42,0.3);color:var(--gold2);text-transform:uppercase;}
 .tag.g{border-color:rgba(45,74,30,0.6);color:#7aab5a;}
 .wbadge{font-size:1.1rem;font-weight:700;color:var(--gold);}
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:rgba(242,234,216,0.05);max-width:1000px;margin:0 auto;}
@@ -87,8 +77,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .copts{display:flex;flex-direction:column;gap:0.25rem;}
 .copt{font-size:0.67rem;color:var(--text-dimmer);display:flex;align-items:center;gap:0.4rem;}
 .copt::before{content:'';width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;display:inline-block;}
-
-/* LOKASI */
 .lokasi{padding:5rem 5vw;background:var(--bg);}
 .lok-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
 @media(max-width:768px){.lok-inner{grid-template-columns:1fr;gap:3rem;}}
@@ -100,58 +88,51 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .lok-icon{font-size:1rem;flex-shrink:0;}
 .lok-text{font-size:0.81rem;color:var(--text-dim);line-height:1.7;}
 .lok-text strong{color:var(--cream);display:block;}
-.maps-btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 1.7rem;background:var(--gold);color:#0d0a07;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-family:sans-serif;}
+.maps-btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 1.7rem;background:var(--gold);color:#0d0a07;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;}
 .maps-btn:hover{background:var(--gold2);}
 .maps-box{background:var(--bg2);border:1px solid rgba(201,146,42,0.12);padding:2rem;display:flex;flex-direction:column;gap:1.2rem;}
 .maps-link{display:block;background:var(--bg);border:1px solid rgba(201,146,42,0.2);padding:1.3rem;text-decoration:none;transition:border-color 0.3s;}
 .maps-link:hover{border-color:rgba(201,146,42,0.5);}
 .note-box{display:flex;align-items:flex-start;gap:0.8rem;padding:1rem 1.2rem;background:rgba(201,146,42,0.06);border-left:2px solid var(--gold);}
 .note-box p{font-size:0.78rem;color:var(--cream2);margin:0;line-height:1.7;}
-
-/* ORDER */
 .order{padding:6rem 5vw;background:var(--bg2);text-align:center;}
 .order h2{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:0.8rem;color:var(--cream);}
 .order h2 em{color:var(--gold);font-style:italic;}
 .order-sub{font-size:0.86rem;color:var(--text-dim);max-width:440px;margin:0 auto 2.5rem;line-height:1.9;}
-.ocard{display:inline-flex;align-items:center;gap:1.2rem;background:var(--bg);border:1px solid rgba(201,146,42,0.25);padding:1.6rem 2.5rem;margin-bottom:2.5rem;transition:border-color 0.3s;}
-.ocard:hover{border-color:var(--gold);}
+.ocard{display:inline-flex;align-items:center;gap:1.2rem;background:var(--bg);border:1px solid rgba(201,146,42,0.25);padding:1.6rem 2.5rem;margin-bottom:2.5rem;}
 .wa-icon{font-size:2.2rem;}
-.olabel{font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:0.2rem;font-family:sans-serif;}
+.olabel{font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:0.2rem;}
 .onumber{font-size:1.4rem;font-weight:700;color:var(--cream);letter-spacing:0.04em;}
 @media(max-width:500px){.ocard{flex-direction:column;text-align:center;padding:1.4rem 1.8rem;}}
 .steps{display:flex;justify-content:center;flex-wrap:wrap;max-width:650px;margin:0 auto 2.5rem;}
 .step{flex:1;min-width:140px;padding:1.5rem 1rem;position:relative;text-align:center;}
 .step:not(:last-child)::after{content:'→';position:absolute;right:-0.4rem;top:50%;transform:translateY(-50%);color:var(--text-dimmer);}
 @media(max-width:500px){.step:not(:last-child)::after{display:none;}}
-.snum{font-size:1.8rem;font-weight:900;color:rgba(201,146,42,0.2);line-height:1;margin-bottom:0.4rem;}
+.snum{font-family:Georgia,serif;font-size:1.8rem;font-weight:900;color:rgba(201,146,42,0.2);line-height:1;margin-bottom:0.4rem;}
 .stext{font-size:0.76rem;color:var(--text-dim);line-height:1.6;}
-.wa-btn{display:inline-flex;align-items:center;gap:0.6rem;padding:1rem 2.3rem;background:#25d366;color:#fff;text-decoration:none;font-size:0.76rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;font-family:sans-serif;}
+.wa-btn{display:inline-flex;align-items:center;gap:0.6rem;padding:1rem 2.3rem;background:#25d366;color:#fff;text-decoration:none;font-size:0.76rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;}
 .wa-btn:hover{background:#1ebe5a;}
-
-/* FOOTER */
 footer{padding:2.2rem 5vw;border-top:1px solid rgba(242,234,216,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.fbrand{font-size:1rem;font-weight:700;color:var(--cream);}
+.fbrand{font-family:Georgia,serif;font-size:1rem;font-weight:700;color:var(--cream);}
 .fbrand span{color:var(--gold);}
 .finfo{font-size:0.7rem;color:var(--text-dimmer);line-height:1.8;text-align:center;}
-.fwa{font-size:0.7rem;color:var(--gold);text-decoration:none;font-family:sans-serif;}
+.fwa{font-size:0.7rem;color:var(--gold);text-decoration:none;}
 @media(max-width:600px){footer{flex-direction:column;text-align:center;}}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">Risky <span>Bawang</span></div>
   <div class="nav-badge">Cabang Magetan</div>
   <a href="https://wa.me/6287780748765" class="nav-wa" target="_blank">📱 087780748765</a>
 </nav>
-
 <section class="hero">
   <div class="hero-bg-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Distributor Rempah Magetan</span></div>
     <h1>Risky<br><span class="accent">Bawang</span><br><span class="light">Magetan</span></h1>
-    <p class="hero-sub">Pusat distribusi bawang putih &amp; rempah pilihan di Magetan. Melayani grosir skala besar maupun eceran — langsung dari sumber terpercaya.</p>
+    <p class="hero-sub">Pusat distribusi bawang putih &amp; rempah pilihan di Magetan. Melayani grosir skala besar maupun eceran.</p>
     <div class="hero-ctas">
       <a href="https://wa.me/6287780748765?text=Halo%20Risky%20Bawang%2C%20saya%20ingin%20pesan%20produk" class="btn-gold" target="_blank">📱 Pesan via WhatsApp</a>
       <a href="#produk" class="btn-outline">Lihat Produk</a>
@@ -163,68 +144,59 @@ footer{padding:2.2rem 5vw;border-top:1px solid rgba(242,234,216,0.06);display:fl
     </div>
   </div>
 </section>
-
 <section class="about">
   <div>
     <span class="stag">Tentang Kami</span>
     <h2>Distributor <em>Terpercaya</em><br>di Magetan</h2>
-    <p>Risky Bawang Cabang Magetan hadir untuk memenuhi kebutuhan bawang putih dan rempah berkualitas — dari rumah tangga, pedagang pasar, warung makan, katering, hingga distributor besar.</p>
-    <p>Kami mengutamakan produk segar, timbangan jujur, dan pelayanan cepat. Berlokasi strategis di Pasar Sayur Magetan.</p>
+    <p>Risky Bawang Cabang Magetan hadir untuk memenuhi kebutuhan bawang putih dan rempah berkualitas — dari rumah tangga, pedagang pasar, katering, hingga distributor besar.</p>
+    <p>Kami mengutamakan produk segar, timbangan jujur, dan pelayanan cepat di Pasar Sayur Magetan.</p>
   </div>
   <div class="about-boxes">
-    <div class="abox"><span class="abox-icon">🧄</span><h4>Produk Segar</h4><p>Bawang &amp; rempah pilihan dari sumber terpercaya.</p></div>
-    <div class="abox"><span class="abox-icon">⚖️</span><h4>Timbangan Jujur</h4><p>Ditimbang akurat, tidak pernah dikurangi.</p></div>
-    <div class="abox"><span class="abox-icon">🚚</span><h4>Pengiriman Lokal</h4><p>Area sekitar Pasar Sayur Magetan.</p></div>
-    <div class="abox"><span class="abox-icon">🤝</span><h4>Grosir &amp; Eceran</h4><p>Semua skala pembelian dilayani.</p></div>
+    <div class="abox"><span class="abox-icon">🧄</span><h4>Produk Segar</h4><p>Bawang &amp; rempah pilihan terpercaya.</p></div>
+    <div class="abox"><span class="abox-icon">⚖️</span><h4>Timbangan Jujur</h4><p>Akurat, tidak pernah dikurangi.</p></div>
+    <div class="abox"><span class="abox-icon">🚚</span><h4>Pengiriman Lokal</h4><p>Area Pasar Sayur Magetan.</p></div>
+    <div class="abox"><span class="abox-icon">🤝</span><h4>Grosir &amp; Eceran</h4><p>Semua skala dilayani.</p></div>
   </div>
 </section>
-
 <section class="products" id="produk">
   <div class="sec-head">
     <span class="stag">Katalog Produk</span>
     <h2>Produk <em>Unggulan</em> Kami</h2>
-    <p>Tersedia dalam kemasan karung maupun eceran sesuai kebutuhan Anda.</p>
+    <p>Tersedia karung maupun eceran sesuai kebutuhan Anda.</p>
   </div>
   <div class="feat-grid">
     <div class="fcard">
-      <img class="fimg" src="images/sinco.jpg" alt="Bawang Putih Sinco Honan">
+      <img class="fimg" src="sinco.jpg" alt="Bawang Putih Sinco">
       <div class="fbody">
         <div class="pname">Bawang Putih Sinco (Honan)</div>
-        <p class="psub">Varietas Honan — biji besar, kulit tipis, aroma kuat. Favorit pedagang grosir.</p>
-        <div class="pmeta">
-          <div class="tags"><span class="tag g">Grade A</span><span class="tag">Stok Tersedia</span></div>
-          <div class="wbadge">20 kg/sak</div>
-        </div>
+        <p class="psub">Biji besar, kulit tipis, aroma kuat. Favorit pedagang grosir.</p>
+        <div class="pmeta"><div class="tags"><span class="tag g">Grade A</span><span class="tag">Stok Ada</span></div><div class="wbadge">20 kg/sak</div></div>
       </div>
     </div>
     <div class="fcard">
-      <img class="fimg" src="images/kating.jpg" alt="Bawang Putih Kating">
+      <img class="fimg" src="kating.jpg" alt="Bawang Putih Kating">
       <div class="fbody">
         <div class="pname">Bawang Putih Kating</div>
-        <p class="psub">Varietas lokal — aroma pekat dan intens. Pilihan utama bumbu giling tradisional.</p>
-        <div class="pmeta">
-          <div class="tags"><span class="tag g">Lokal Premium</span><span class="tag">Stok Tersedia</span></div>
-          <div class="wbadge">20 kg/sak</div>
-        </div>
+        <p class="psub">Aroma pekat dan intens. Pilihan utama bumbu giling tradisional.</p>
+        <div class="pmeta"><div class="tags"><span class="tag g">Lokal Premium</span><span class="tag">Stok Ada</span></div><div class="wbadge">20 kg/sak</div></div>
       </div>
     </div>
   </div>
   <div class="pgrid">
-    <div class="pcard"><img class="pimg" src="images/bombay.jpg" alt="Bawang Bombay"><div class="pbody"><div class="cname">Bawang Bombay</div><p class="cdesc">Segar, berukuran besar. Cocok untuk tumisan, sup, dan masakan sehari-hari.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Stok selalu tersedia</div></div></div></div>
-    <div class="pcard"><img class="pimg" src="images/cabe.jpg" alt="Cabai Kering"><div class="pbody"><div class="cname">Cabai Kering</div><p class="cdesc">Warna merah cerah, kepedasan optimal. Ideal untuk bumbu dan industri makanan.</p><div class="copts"><div class="copt">Per Sak 10 kg</div><div class="copt">Kering sempurna</div></div></div></div>
-    <div class="pcard"><img class="pimg" src="images/ketumbar.jpg" alt="Ketumbar"><div class="pbody"><div class="cname">Ketumbar</div><p class="cdesc">Kualitas tinggi, aroma segar khas. Tersedia sak maupun eceran.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Eceran tersedia</div></div></div></div>
-    <div class="pcard"><img class="pimg" src="images/merica.jpg" alt="Merica"><div class="pbody"><div class="cname">Merica / Lada</div><p class="cdesc">Butiran pilihan, aroma kuat dan tajam. Dari rumah tangga hingga industri.</p><div class="copts"><div class="copt">Eceran (per kg)</div><div class="copt">Kualitas terjamin</div></div></div></div>
-    <div class="pcard"><img class="pimg" src="images/kacang.jpg" alt="Kacang Tanah"><div class="pbody"><div class="cname">Kacang Tanah Kupas</div><p class="cdesc">Kupas bersih, siap olah. Sempurna untuk industri kuliner dan usaha makanan.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Kupas bersih</div></div></div></div>
-    <div class="pcard"><img class="pimg" src="images/kemiri.jpg" alt="Kemiri"><div class="pbody"><div class="cname">Kemiri</div><p class="cdesc">Gurih alami, cocok untuk semua masakan tradisional Indonesia.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Eceran 5 kg tersedia</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="bombay.jpg" alt="Bawang Bombay"><div class="pbody"><div class="cname">Bawang Bombay</div><p class="cdesc">Segar, berukuran besar. Untuk tumisan, sup, masakan sehari-hari.</p><div class="copts"><div class="copt">Per Sak 25 kg</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="cabe.jpg" alt="Cabai Kering"><div class="pbody"><div class="cname">Cabai Kering</div><p class="cdesc">Merah cerah, kepedasan optimal. Untuk bumbu dan industri makanan.</p><div class="copts"><div class="copt">Per Sak 10 kg</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="ketumbar.jpg" alt="Ketumbar"><div class="pbody"><div class="cname">Ketumbar</div><p class="cdesc">Kualitas tinggi, aroma segar. Tersedia sak maupun eceran.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Eceran tersedia</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="merica.jpg" alt="Merica"><div class="pbody"><div class="cname">Merica / Lada</div><p class="cdesc">Butiran pilihan, aroma kuat. Dari rumah tangga hingga industri.</p><div class="copts"><div class="copt">Eceran (per kg)</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="kacang.jpg" alt="Kacang Tanah"><div class="pbody"><div class="cname">Kacang Tanah Kupas</div><p class="cdesc">Kupas bersih, siap olah. Untuk industri kuliner dan usaha makanan.</p><div class="copts"><div class="copt">Per Sak 25 kg</div></div></div></div>
+    <div class="pcard"><img class="pimg" src="kemiri.jpg" alt="Kemiri"><div class="pbody"><div class="cname">Kemiri</div><p class="cdesc">Gurih alami untuk semua masakan tradisional Indonesia.</p><div class="copts"><div class="copt">Per Sak 25 kg</div><div class="copt">Eceran 5 kg tersedia</div></div></div></div>
   </div>
 </section>
-
 <section class="lokasi">
   <div class="lok-inner">
     <div>
       <span class="stag">Lokasi &amp; Jam Buka</span>
       <h2>Temukan Kami di <em>Pasar Sayur Magetan</em></h2>
-      <p class="lok-desc">Kunjungi langsung atau hubungi via WhatsApp sebelum datang untuk memastikan ketersediaan stok.</p>
+      <p class="lok-desc">Kunjungi langsung atau hubungi via WhatsApp sebelum datang.</p>
       <div class="lok-rows">
         <div class="lok-row"><span class="lok-icon">📍</span><div class="lok-text"><strong>Alamat</strong>Pasar Sayur Magetan, Jawa Timur</div></div>
         <div class="lok-row"><span class="lok-icon">🕐</span><div class="lok-text"><strong>Jam Buka</strong>Setiap hari, 05.00 – 19.00 WIB</div></div>
@@ -233,29 +205,22 @@ footer{padding:2.2rem 5vw;border-top:1px solid rgba(242,234,216,0.06);display:fl
       <a href="https://maps.app.goo.gl/8R6ZzT6CLXJa9jhU6" class="maps-btn" target="_blank">🗺️ Buka di Google Maps</a>
     </div>
     <div class="maps-box">
-      <div>
-        <div style="font-size:1rem;font-weight:600;color:var(--cream2);margin-bottom:0.3rem;">🧭 Navigasi ke Toko Kami</div>
-        <p style="font-size:0.8rem;color:var(--text-dim);line-height:1.8;margin:0;">Kami berlokasi di <strong style="color:var(--cream);">Pasar Sayur Magetan</strong>. Tap tombol untuk buka Google Maps.</p>
-      </div>
+      <div><p style="font-size:1rem;font-weight:600;color:var(--cream2);margin-bottom:0.3rem;font-family:Georgia,serif;">🧭 Navigasi ke Toko Kami</p><p style="font-size:0.8rem;color:var(--text-dim);line-height:1.8;margin:0;">Berlokasi di <strong style="color:var(--cream);">Pasar Sayur Magetan</strong>.</p></div>
       <a href="https://maps.app.goo.gl/8R6ZzT6CLXJa9jhU6" target="_blank" class="maps-link">
-        <div style="font-size:2.2rem;margin-bottom:0.6rem;">🗺️</div>
-        <div style="font-size:0.95rem;font-weight:600;color:var(--cream);margin-bottom:0.2rem;">Risky Bawang — Magetan</div>
-        <div style="font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;font-family:sans-serif;">TAP UNTUK BUKA GOOGLE MAPS →</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🗺️</div>
+        <div style="font-size:0.95rem;font-weight:600;color:var(--cream);margin-bottom:0.2rem;font-family:Georgia,serif;">Risky Bawang — Magetan</div>
+        <div style="font-size:0.68rem;color:var(--gold);letter-spacing:0.1em;">TAP UNTUK BUKA GOOGLE MAPS →</div>
       </a>
-      <div class="note-box"><span style="font-size:1rem;flex-shrink:0;">🚚</span><p><strong>Pengiriman Online</strong> tersedia khusus area sekitar Pasar Sayur Magetan. Di luar area, kami melayani <strong>offline / ambil sendiri</strong>.</p></div>
+      <div class="note-box"><span style="font-size:1rem;flex-shrink:0;">🚚</span><p><strong>Pengiriman Online</strong> area sekitar Pasar Sayur Magetan. Di luar area, <strong>offline / ambil sendiri</strong>.</p></div>
     </div>
   </div>
 </section>
-
 <section class="order" id="order">
   <span class="stag" style="display:block;margin-bottom:0.7rem;">Cara Pemesanan</span>
   <h2>Pesan <em>Sekarang</em><br>via WhatsApp</h2>
   <p class="order-sub">Hubungi kami untuk cek stok, harga terkini, dan info pengiriman.</p>
   <div style="display:flex;justify-content:center;margin-bottom:2.5rem;">
-    <div class="ocard">
-      <div class="wa-icon">📱</div>
-      <div><div class="olabel">WhatsApp / Telepon</div><div class="onumber">0877-8074-8765</div></div>
-    </div>
+    <div class="ocard"><div class="wa-icon">📱</div><div><div class="olabel">WhatsApp / Telepon</div><div class="onumber">0877-8074-8765</div></div></div>
   </div>
   <div class="steps">
     <div class="step"><div class="snum">01</div><div class="stext">Hubungi via WhatsApp</div></div>
@@ -263,4 +228,12 @@ footer{padding:2.2rem 5vw;border-top:1px solid rgba(242,234,216,0.06);display:fl
     <div class="step"><div class="snum">03</div><div class="stext">Konfirmasi harga &amp; stok</div></div>
     <div class="step"><div class="snum">04</div><div class="stext">Ambil / terima produk</div></div>
   </div>
-  <a href="https://wa.me/6287780748765?text=Halo%20Risky%20Baw
+  <a href="https://wa.me/6287780748765?text=Halo%20Risky%20Bawang%20Magetan%2C%20saya%20ingin%20tanya%20produk%20dan%20harga" class="wa-btn" target="_blank">💬 Chat WhatsApp Sekarang</a>
+</section>
+<footer>
+  <div class="fbrand">Risky <span>Bawang</span> — Magetan</div>
+  <div class="finfo">Pasar Sayur Magetan, Jawa Timur<br>Buka 05.00 – 19.00 · Setiap Hari</div>
+  <a href="https://wa.me/6287780748765" class="fwa" target="_blank">📱 0877-8074-8765</a>
+</footer>
+</body>
+                                                       </html>
